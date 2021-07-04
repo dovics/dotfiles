@@ -1,27 +1,23 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:~/workspace/flutter/bin
+
+# Mysql Client PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/dovics/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
-# Golang
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-export GOPATH=~/go
+# Kubebuilder PATH
+export PATH=$PATH:/usr/local/kubebuilder/bin
 
-# Rust
-export PATH=$PATH:~/.cargo/bin
-RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="ys"
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -73,17 +69,14 @@ ZSH_THEME="ys"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-autosuggestions
-)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -109,4 +102,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c="clear"
+#GOROOT
+export GOROOT=/usr/local/go
+
+#GOPATH
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+#GOPATH root bin
+alias code=\''/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'\'
+
+#FLUTTER
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH=$PATH:$HOME/.pub-cache/bin
+
+#HOMEBREW
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.cloud.tencent.com/homebrew-bottles
+
+#RUST
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+export PATH=$PATH:/Users/wangrushen/Library/Caches/.wasm-pack/wasm-bindgen-cargo-install-0.2.73/bin
+CARGO_HTTP_MULTIPLEXING=false
+
+export EDITOR='nvim'
+alias vim="nvim"
+alias proxy='export all_proxy=http://192.168.0.27:7890'
+alias v2rayproxy='export all_proxy=http://127.0.0.1:8001'
+alias unproxy='unset all_proxy'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export EDEX_CONFIG='/Users/wangrushen/Library/Application Support/eDEX-UI'
+alias c="clear && neofetch --iterm2 $HOME/Pictures/background.png --size 450px"
+# alias c="clear"
+neofetch --iterm2 $HOME/Pictures/background.png --size 450px
