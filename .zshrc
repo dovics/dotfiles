@@ -5,10 +5,7 @@ export PATH=$PATH:~/workspace/flutter/bin
 # Mysql Client PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
-
-# Kubebuilder PATH
-export PATH=$PATH:/usr/local/kubebuilder/bin
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,10 +70,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -128,13 +124,11 @@ CARGO_HTTP_MULTIPLEXING=false
 
 export EDITOR='nvim'
 alias vim="nvim"
-alias proxy='export all_proxy=http://192.168.0.27:7890'
-alias v2rayproxy='export all_proxy=http://127.0.0.1:8001'
+alias proxy='export all_proxy=http://127.0.0.1:7890'
 alias unproxy='unset all_proxy'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export EDEX_CONFIG='/Users/wangrushen/Library/Application Support/eDEX-UI'
-alias c="clear && neofetch --iterm2 $HOME/Pictures/background.png --size 450px"
-# alias c="clear"
-neofetch --iterm2 $HOME/Pictures/background.png --size 450px
+# alias c="clear && neofetch --iterm2 $HOME/Pictures/background.png --size 450px"
+alias c="clear"
+alias cls="clear"
