@@ -8,7 +8,7 @@ filetype plugin on
 filetype plugin indent on
 
 syntax on
-set cursorline 
+set cursorline
 set showmode
 set showcmd
 
@@ -26,7 +26,7 @@ let &t_SI = "\<ESC>]50;CursorShape=1\x7"
 let &t_SR = "\<ESC>]50;CursorShape=2\x7"
 let &t_EI = "\<ESC>]50;CursorShape=0\x7"
 
-set wrap 
+set wrap
 set linebreak
 set laststatus=2
 set ruler
@@ -69,7 +69,6 @@ Plug 'iamcco/markdown-preview.vim', {'do':{ -> mkdp#util#install() } }
 
 Plug 'Yggdroot/indentLine'
 Plug 'luochen1990/rainbow'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -79,13 +78,13 @@ let g:NERDTreeShowHidden = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " indentLine
-let g:indent_guides_guide_size            = 1 
-let g:indent_guides_start_level           = 2 
+let g:indent_guides_guide_size            = 1
+let g:indent_guides_start_level           = 2
 
 " coc
 let g:coc_global_extensions = ['coc-json','coc-css','coc-html',
-			\ 'coc-go', 'coc-python', 'coc-clangd',
-			\ 'coc-yaml']
+                        \ 'coc-go', 'coc-python', 'coc-clangd', 'coc-rust-analyzer',
+                        \ 'coc-yaml']
 
 set updatetime=300
 
@@ -103,5 +102,7 @@ nmap <silent> gr <Plug>(coc-references):
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 " theme
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 colorscheme gruvbox
