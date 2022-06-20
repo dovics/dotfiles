@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:~/workspace/flutter/bin
 
 # Mysql Client PATH
 
@@ -105,16 +104,6 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-#GOPATH root bin
-alias code=\''/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'\'
-
-#FLUTTER
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-export PATH=$PATH:$HOME/.pub-cache/bin
-
-#HOMEBREW
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.cloud.tencent.com/homebrew-bottles
 
 #RUST
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
@@ -123,7 +112,6 @@ export PATH=$PATH:/Users/wangrushen/Library/Caches/.wasm-pack/wasm-bindgen-cargo
 CARGO_HTTP_MULTIPLEXING=false
 
 export EDITOR='nvim'
-alias vim="nvim"
 alias proxy='export all_proxy=http://127.0.0.1:7890'
 alias unproxy='unset all_proxy'
 
