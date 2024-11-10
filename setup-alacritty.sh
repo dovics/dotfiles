@@ -12,4 +12,4 @@ apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfix
 
 cargo install alacritty
 
-cp .config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+cp .config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
