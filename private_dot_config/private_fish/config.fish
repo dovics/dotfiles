@@ -3,6 +3,7 @@ set -x PATH $PATH /opt/homebrew/opt/llvm@12/bin
 set -x PATH $PATH $HOME/bin
 set -x PATH $PATH $HOME/miniconda3/bin
 set -x EDITOR nvim
+set -x TERMINFO /usr/share/terminfo
 
 # Golang
 set -x GOPROXY https://proxy.golang.com.cn,direct
