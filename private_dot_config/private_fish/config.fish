@@ -5,6 +5,8 @@ set -x PATH $PATH $HOME/miniconda3/bin
 set -x EDITOR nvim
 set -x TERMINFO /usr/share/terminfo
 
+set -x PATH $PATH $HOME/.local/bin
+
 # Golang
 set -x GOPROXY https://proxy.golang.com.cn,direct
 set -x PATH $PATH $HOME/go/bin
