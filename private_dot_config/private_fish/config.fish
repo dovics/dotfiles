@@ -29,3 +29,17 @@ else
     end
 end
 # <<< conda initialize <<
+
+# pnpm
+set -gx PNPM_HOME "/home/dovics/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx PATH $HOME/.cabal/bin $PATH /home/dovics/.ghcup/bin # ghcup-env
+
+string match -q "$TERM_PROGRAM" vscode
+and . (code --locate-shell-integration-path fish)
+
