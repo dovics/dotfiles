@@ -2,6 +2,8 @@ set -x PATH $PATH /opt/homebrew/bin/
 set -x PATH $PATH /opt/homebrew/opt/llvm@12/bin
 set -x PATH $PATH $HOME/bin
 set -x PATH $PATH $HOME/miniconda3/bin
+set -x PATH $PATH /usr/local/cuda-12.9/bin
+set -x PATH $PATH $HOME/.cargo/bin/
 set -x EDITOR nvim
 set -x TERMINFO /usr/share/terminfo
 
@@ -14,7 +16,7 @@ set -x PATH $PATH /usr/local/go/bin/
 set -g fish_greeting
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here 
 end
 
 # >>> conda initialize >>>
@@ -42,4 +44,3 @@ set -gx PATH $HOME/.cabal/bin $PATH /home/dovics/.ghcup/bin # ghcup-env
 
 string match -q "$TERM_PROGRAM" vscode
 and . (code --locate-shell-integration-path fish)
-
