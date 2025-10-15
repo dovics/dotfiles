@@ -10,10 +10,14 @@ set -x TERMINFO /usr/share/terminfo
 set -x PATH $PATH $HOME/.local/bin
 
 # Golang
-set -x GOPROXY https://proxy.golang.com.cn,direct
+set -x GOPROXY https://goproxy.cn,direct
 set -x PATH $PATH $HOME/go/bin
 set -x PATH $PATH /usr/local/go/bin/
 set -g fish_greeting
+
+# ESP32 Rust
+set -x LIBCLANG_PATH "$HOME/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-20.1.1_20250829/esp-clang/lib"
+set -x PATH $PATH $HOME/.rustup/toolchains/esp/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin
 
 if status is-interactive
     # Commands to run in interactive sessions can go here 
