@@ -1,0 +1,13 @@
+{
+  "providers": {
+    "insightst": {
+      "baseUrl": "http://100.72.38.53:30001/v1",
+      "api": "openai-completions",
+      "apiKey": "local-secret-key",
+      "models": [
+        { "id": "glm-insightst" },
+        { "id": "kimi-insightst" }
+      ]
+    }
+  }
+}

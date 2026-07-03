@@ -1,0 +1,14 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "theme": "dark",
+  "defaultProvider": "insightst",
+  "defaultModel": "glm-insightst",
+  "packages": [
+    "npm:pi-simplify",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-subagents",
+    "npm:@ayulab/pi-rewind",
+    "npm:superpowers-zh"
+  ],
+  "hideThinkingBlock": true
+}
